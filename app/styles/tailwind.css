@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('public/fonts/Roboto-Light.woff2') format('woff2');
+  font-display: swap
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('public/fonts/Roboto-Regular.woff2') format('woff2');
+  font-display: swap
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('public/fonts/Roboto-Medium.woff2') format('woff2');
+  font-display: swap
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('public/fonts/Roboto-Bold.woff2') format('woff2');
+  font-display: swap
+}
+
+.bg-clip-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.text-fill-transparent {
+  -webkit-text-fill-color: transparent;
+}
+
+.bookmark:last-of-type>span:not(:first-child) {
+  display: none;
+}
+
+.modalGradient {
+  background: linear-gradient(270deg, #5694F2 0%, #18C9A1 100%);
+}
+
+.customersLeftGradient {
+  background: linear-gradient(270deg, rgba(48, 198, 157, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.customersRightGradient {
+  background: linear-gradient(90deg, rgba(86, 148, 242, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.buttonGradient {
+  background: linear-gradient(to right,#18C9A1, #5694F2 40%, #46D4B4 60%, #78A9F5 100%);
+  transition: background 1s cubic-bezier(0, 0.64, 0.17, 0.99);
+  background-size: 250% 1px;
+  background-position: 0% center;
+};
+
+.buttonGradient:disabled {
+  background: linear-gradient(
+    to right,
+    rgba(24, 201, 161, 1)
+    rgba(86, 148, 242, 1),
+  );
+  background-size: 100%;
+  background-position: 0%;
+}
+
+.buttonGradient:active {
+  background: linear-gradient(
+    to right,
+    #4F8C6A,
+    #2D88E1
+  );
+  background-size: 100%;
+  background-position: 0%;
+}
+
+html {
+  height: 100%;
+}
+
+html.scroll-fixed body {
+  overflow: hidden;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+main {
+  flex-shrink: 0 !important;
+}
+
+.text-list.--num {
+  list-style-type: decimal;
+}
+
+.text-list.--dot {
+  list-style-type: disc;
+}
+
+.text-list li:last-child {
+  margin-bottom: unset !important;
+}
+
+.brand-logo {
+  transition: width 0.3s;
+}
+
+.brand-logo path {
+  transition: fill 0.3s;
+}
+
+.scroll-hidden {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.transition-font {
+  transition: font 0.3s;
+}
+
+.transition-header {
+  transition: padding 0.3s, background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+button:focus {
+  outline: unset;
+}
+
+.html-markup a {
+  text-decoration: underline;
+}
+
+.html-markup a:hover {
+  text-decoration: none;
+}
+
+.object-bottom-center {
+  object-position: object-bottom-center;
+}
+
+b {
+  font-weight: 500;
+}
+
+code {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@media (max-width: 1100px) {
+  code {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.text-elipsed {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+}
